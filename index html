@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess Correctly</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1 class="game-title">Guess Correctly</h1>
+            <button class="settings-btn" id="openSettings">⚙</button>
+        </header>
+
+        <div class="scoreboard">
+            <p>Score: <span id="score">0</span></p>
+            <p>High Score: <span id="highScore">0</span></p>
+        </div>
+
+        <div class="leaderboard">
+            <h2>Leaderboard</h2>
+            <ul id="leaderboardList">
+                <!-- Scores will be displayed here -->
+            </ul>
+        </div>
+
+        <div class="game-area">
+            <input type="number" id="guessInput" placeholder="Enter your guess..." />
+            <button id="guessBtn">Guess</button>
+            <p id="message"></p>
+        </div>
+
+        <button id="restartBtn" class="restart">Restart</button>
+    </div>
+
+    <!-- SETTINGS POPUP -->
+    <div class="settings-popup" id="settingsPopup">
+        <div class="settings-content">
+            <button class="close-settings" id="closeSettings">✖</button>
+            <h2>Settings</h2>
+
+            <div class="setting-section">
+                <label>Difficulty</label>
+                <input type="range" min="1" max="3" value="2" id="difficultySlider" />
+                <p class="difficulty-label">Medium</p>
+            </div>
+
+            <div class="setting-section">
+                <label>Sound</label>
+                <div class="sound-controls">
+                    <button id="volDown">🔉</button>
+                    <button id="muteBtn">🔇</button>
+                    <button id="volUp">🔊</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
