@@ -1,0 +1,160 @@
+/* ==== GLOBAL STYLING ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #0d0d0d url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.game-container {
+    text-align: center;
+    width: 350px;
+}
+
+/* ==== HEADER ==== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.game-title {
+    font-size: 26px;
+    color: #ffd700;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.settings-btn {
+    background: none;
+    border: none;
+    color: #ffd700;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ==== SCOREBOARD ==== */
+.scoreboard {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.leaderboard {
+    background: rgba(255, 215, 0, 0.1);
+    border: 1px solid #ffd700;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 10px;
+}
+
+.leaderboard h2 {
+    margin-bottom: 6px;
+    color: #ffd700;
+    font-size: 18px;
+}
+
+/* ==== GAME AREA ==== */
+.game-area {
+    margin-top: 15px;
+}
+
+#guessInput {
+    padding: 10px;
+    width: 80%;
+    border: 2px solid #ffd700;
+    border-radius: 5px;
+    text-align: center;
+    background: #1a1a1a;
+    color: white;
+}
+
+#guessBtn {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    background: #ffd700;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#message {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.restart {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid #ffd700;
+    color: #ffd700;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* ==== SETTINGS POPUP ==== */
+.settings-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+}
+
+.settings-content {
+    width: 300px;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transform: scale(0.6);
+    opacity: 0;
+    transition: 0.3s ease;
+    border: 2px solid #ffd700;
+}
+
+.settings-popup.show .settings-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.close-settings {
+    float: right;
+    background: none;
+    border: none;
+    color: red;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.setting-section {
+    margin: 15px 0;
+}
+
+.sound-controls button {
+    margin: 0 5px;
+    padding: 8px;
+    background: #ffd700;
+    border: none;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+}
